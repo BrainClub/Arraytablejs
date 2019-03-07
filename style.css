@@ -11,7 +11,12 @@ body{
 }
 
 .info{
-    margin: auto;
+    margin:  0 auto;
+}
+
+#table{
+    max-width: 350px;
+    display: flex;
 }
 td{
     display: inline-block;
