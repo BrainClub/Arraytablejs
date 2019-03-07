@@ -1,69 +1,62 @@
-let arr = new Array(5);
-for (let i = 0; i <arr.length; i++){
-    arr[i] = new Array(5);
-}
-
-function print() {
-    for (let i = 0; i < arr.length; i++){
-        document.write(arr[i]);
-        document.write('<br/>');
-    }
-}
-
-let overnumber = 0;
+let overnumber = [];
 let lessnumber = 20;
 
 let rowArr = [];
 let newArr = [];
 
+let n = 0;
+let m = 0;
+
+
+
 function tableCreate() {
     let table = document.getElementById('table');
     let tbody = document.createElement('tbody');
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < 5; i++) {
         let tr = document.createElement('tr');
-
         newArr[i] = new Array();
-
         let rowMax = 0;
+        tr.id = "elment" + i;
 
-        for (let j = 0; j < arr[i].length; j++) {
+
+        for (let j = 0; j < 5; j++) {
                 let td = document.createElement('td');
-                let arrSumm = Math.round(Math.random() *20)
-                td.innerHTML = arrSumm;
+                let arrSumm = Math.round(Math.random() *20000);
+                newArr[i].push(arrSumm);
+
+                td.id = "tdelement" + i + j;
+
+
+                td.innerHTML = newArr[i][j];
                 tr.appendChild(td);
 
-
-            newArr[i].push(arrSumm);
-
-
-            if(rowMax < arrSumm){
-                rowMax = arrSumm;
+            if(overnumber < newArr[i][j]){
+                overnumber = newArr[i][j];
+                n = i;
+                m = j;
             }
-            if(overnumber < arrSumm){
-                overnumber = arrSumm;
-            }
+
             if(lessnumber > arrSumm){
                 lessnumber = arrSumm;
             }
-
+            if(rowMax < arrSumm){
+                rowMax = arrSumm;
+            }
         }
-
-
-
 
         rowArr.push(rowMax);
         tbody.appendChild(tr);
-
     }
     console.log(newArr);
     table.appendChild(tbody);
-
-
 }
 
 
 
 tableCreate();
+
+
+console.log(newArr[n][m]);
 
 
 
@@ -110,7 +103,7 @@ function summrow(){
     console.log(rowArr);
 }
 function summ(){
-    console.log(overnumber);
-    console.log(lessnumber);
+    document.getElementById("tdelement"+ n + m).style.color = 'black';
+    document.getElementById("tdelement"+ n + m).style.background = 'white';
 
 }
