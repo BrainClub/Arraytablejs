@@ -21,7 +21,7 @@ function tableCreate() {
 
         for (let j = 0; j < 5; j++) {
                 let td = document.createElement('td');
-                let arrSumm = Math.round(Math.random() *20000);
+                let arrSumm = Math.round(Math.random() *20);
                 newArr[i].push(arrSumm);
 
                 td.id = "tdelement" + i + j;
