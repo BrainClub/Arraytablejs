@@ -12,17 +12,17 @@
     <div class="container">
         <div class="info">
             <p class="info__text">made a team of professionals</p>
-            <table id="MyArray">
-            </table>
         </div>
     </div>
+    <div id="table">
 
+    </div>
     <form>
 
-        <label><input name="filter" type="radio" required>Найбільше число</label>
-        <label><input name="filter" type="radio" required>Найбільше число в рядку</label>
+        <label><input onclick="summ()" name="filter" type="radio" required>Найбільше число</label>
+        <label><input onclick="summrow()" name="filter" type="radio" required>Найбільше число в рядку</label>
         <label><input name="filter" type="radio" required>Найбільше число в стовбчику</label>
-        <button onclick="summ()">Знайти</button>
+        <p><button>Знайти</button></p>
     </form>
 
     <script src="main.js"></script>
