@@ -58,10 +58,6 @@ tableCreate();
 
 console.log(newArr[n][m]);
 
-
-
-
-
 //
 // let max = 0;
 //
