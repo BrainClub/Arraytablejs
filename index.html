@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Двомирний масив + HTML + CSS</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -16,16 +18,18 @@
             </div>
 
             <div id="table">
+                <form>
+
+                </form>
+            </div>
+            <div class="flex">
+                <label><input onclick="summ()" value="summ" name="filter" type="radio" required>Найбільше число</label>
+                <label><input onclick="summrow()" value="summrow"  name="filter" type="radio" required>Найбільше число в рядку</label>
+                <label><input onclick="summcolumn()" value="summcolumn" name="filter" type="radio" required>Найбільше число в стовбчику</label>
+                <label><button onclick="return myFunction()">Click me</button></label>
 
             </div>
-            <form>
-
-                <label><input onclick="summ()" name="filter" type="radio" required>Найбільше число</label>
-                <label><input onclick="summrow()" name="filter" type="radio" required>Найбільше число в рядку</label>
-                <label><input name="filter" type="radio" required>Найбільше число в стовбчику</label>
-                <p><button>Знайти</button></p>
-            </form>
-        </div>
+            </div>
     </div>
     <script src="main.js"></script>
 </body>
