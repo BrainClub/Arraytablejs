@@ -5,7 +5,6 @@ let overNumberRow = [];
 let column = [];
 let columnNumber = 0;
 
-
 let rowArr = [];
 let newArr = [];
 
@@ -13,7 +12,6 @@ let n = 0;
 let m = 0;
 let r = 0;
 let с = 0;
-
 
 function tableCreate() {
     let table = document.getElementById('table');
@@ -28,7 +26,6 @@ function tableCreate() {
         for (let j = 0; j < 5; j++) {
                 let td = document.createElement('td');
                 let arrSumm = Math.round(Math.random() *100);
-                
                 newArr[i].push(arrSumm);
                 td.id = "tdelement" + i + j;
                 td.innerHTML = newArr[i][j];
@@ -51,8 +48,6 @@ function tableCreate() {
             }
         }
 
-
-
         numberRow.push(r);
 
         rowArr.push(rowMax);
@@ -72,14 +67,9 @@ function tableCreate() {
     }
 
     console.log(column);
-
-
-    // console.log(newArr);
     table.appendChild(tbody);
     console.log(numberRow.length);
 }
-
-
 
 tableCreate();
 
@@ -131,13 +121,10 @@ function myFunction() {
         }
     }
 
-
     // p = document.querySelector(`input[name="filter"]:checked`).value;
     //
     // console.log(p);
 }
-
-
 
 
 function summrow(){
